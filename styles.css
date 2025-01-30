@@ -1,0 +1,9 @@
+.path-local-categoryimporter .import-form {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.path-local-categoryimporter .import-form .form-group {
+    margin-bottom: 15px;
+}
