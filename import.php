@@ -65,7 +65,6 @@ if ($mform->is_cancelled()) {
     // Encontrar índices das colunas
     $name_index = array_search('name', $headers);
     $description_index = array_search('description', $headers);
-    $parent_index = array_search('parent', $headers);
     $idnumber_index = array_search('idnumber', $headers);
     $category_path_index = array_search('category_path', $headers);
     
@@ -96,18 +95,10 @@ if ($mform->is_cancelled()) {
                 : '';
             $category->descriptionformat = FORMAT_HTML;
             
-            // Determinar o parent_id
-            if ($category_path_index !== false && !empty($data[$category_path_index])) {
-                // Se category_path está presente e preenchido, use-o
-                $category->parent = find_or_create_category_by_path($data[$category_path_index]);
-            } else if ($parent_index !== false && !empty($data[$parent_index])) {
-                // Senão, se parent está preenchido, use-o
-                $parent = $DB->get_record('course_categories', 
-                    array('name' => trim($data[$parent_index])));
-                $category->parent = $parent ? $parent->id : 0;
-            } else {
-                $category->parent = 0;
-            }
+            // Determinar o parent_id usando apenas category_path
+            $category->parent = ($category_path_index !== false && !empty($data[$category_path_index])) 
+                ? find_or_create_category_by_path($data[$category_path_index])
+                : 0;
             
             // ID Number é opcional
             if ($idnumber_index !== false && !empty($data[$idnumber_index])) {
@@ -137,5 +128,4 @@ if ($mform->is_cancelled()) {
 echo $OUTPUT->header();
 $mform->display();
 echo $OUTPUT->footer();
-
 
