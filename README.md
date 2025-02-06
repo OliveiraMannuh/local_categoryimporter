@@ -22,7 +22,8 @@ Logs do sistema
 Tooltips e ajudas contextuais
 Documentação integrada
 
-A tradução foi realizada seguindo os padrões oficiais do Moodle para o português do Brasil e está disponível por padrão na instalação. O pacote de idiomas é mantido pela comunidade brasileira do Moodle e é atualizado regularmente.
+A tradução foi realizada seguindo os padrões oficiais do Moodle para o português do Brasil e está disponível por padrão na instalação. 
+O pacote de idiomas é mantido pela comunidade brasileira do Moodle e é atualizado regularmente.
 
 
 ## Requisitos
