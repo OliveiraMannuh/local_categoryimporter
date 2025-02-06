@@ -24,7 +24,7 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version = 2025012900;
+$plugin->version = 2025012901;
 $plugin->requires = 2022112800; // Moodle 4.1.13
 $plugin->component = 'local_categoryimporter';
 $plugin->maturity = MATURITY_STABLE;
