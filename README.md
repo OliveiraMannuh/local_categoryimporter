@@ -6,7 +6,6 @@ Um plugin para importação em massa de categorias no Moodle através de arquivo
 
 - Importação de múltiplas categorias e subcategorias via arquivo CSV
 - Suporte à estrutura hierárquica de categorias
-- Validação de dados antes da importação
 - Interface amigável para upload de arquivos
 - Mapeamento automático de categorias pai/filho
 - Suporte a caracteres especiais e acentuação
